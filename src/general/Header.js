@@ -5,7 +5,11 @@ class Header extends Component {
   render() {
     return (
       <Row>
-        <Col />
+        <Col>
+          <Row>
+            <Col>Aqui vai o logo</Col>
+          </Row>
+        </Col>
       </Row>
     );
   }
