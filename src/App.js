@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import QuoteBlock from "./QuoteBlock";
+import { Container } from "reactstrap";
+import Header from "./general/Header";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        Meu site bonitao
-        <QuoteBlock />
-      </div>
+      <Container fluid>
+        <Header />
+      </Container>
     );
   }
 }
