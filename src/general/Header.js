@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Button } from "reactstrap";
+import HeaderLogo from "./HeaderLogo";
 import HeaderTitle from "./HeaderTitle";
 import DellarcoCarousel from "./DellarcoCarousel";
+import HeaderSubscribe from "./HeaderSubscribe";
 
 class Header extends Component {
   render() {
@@ -9,16 +11,35 @@ class Header extends Component {
       <Row>
         <Col>
           <Row>
-            <Col>Aqui vai o logo</Col>
+            <Col sm="4" md={{ size: 4, offset: 5 }}>
+              <HeaderLogo />
+            </Col>
           </Row>
           <Row>
-            <Col className="text-right"><HeaderTitle/></Col>
+            <Col className="text-right">
+              <HeaderTitle />
+            </Col>
           </Row>
+          <br />
           <Row>
-            <Col>Aqui o form do eduardo</Col>
+            <Col sm="4" md={{ size: 6, offset: 6 }}>
+              <HeaderSubscribe />
+            </Col>
           </Row>
+          <br />
           <Row>
-            <Col><DellarcoCarousel /></Col>
+            <Col>
+              <DellarcoCarousel />
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col>Apresentações</Col>
+            <Col>Casamentos</Col>
+            <Col>Ensaios</Col>
+            <Col>Aulass</Col>
+            <Col>Eventos</Col>
+            <Col>Palestras</Col>
           </Row>
         </Col>
       </Row>
