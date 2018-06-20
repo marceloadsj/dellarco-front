@@ -10,29 +10,31 @@ class Header extends Component {
     return (
       <Row>
         <Col>
-          <Row>
-            <Col sm="4" md={{ size: 4, offset: 5 }}>
+
+          <Row className="justify-content-center">
+            <Col xs="auto">
               <HeaderLogo />
             </Col>
           </Row>
-          <Row>
+
+          <Row className="mb-5">
             <Col className="text-right">
               <HeaderTitle />
             </Col>
           </Row>
-          <br />
-          <Row>
-            <Col sm="4" md={{ size: 6, offset: 6 }}>
+
+          <Row className="justify-content-end mb-5">
+            <Col xs="auto">
               <HeaderSubscribe />
             </Col>
           </Row>
-          <br />
-          <Row>
-            <Col>
+
+          <Row className="justify-content-center mb-5">
+            <Col xs="auto">
               <DellarcoCarousel />
             </Col>
           </Row>
-          <br />
+
           <Row>
             <Col>Apresentações</Col>
             <Col>Casamentos</Col>
