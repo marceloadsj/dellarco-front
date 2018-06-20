@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Media } from "reactstrap";
+import Logo from  "../images/Logo.png";
 
 class HeaderLogo extends Component {
   render() {
-    return <h1>Aqui LOGO</h1>;
-    <Media>
-      <Media object data-src="Logo.png" alt="Generic placeholder image" />
-    </Media>;
+    return <img src={Logo}/>;
   }
 }
 
