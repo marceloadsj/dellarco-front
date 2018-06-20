@@ -26,45 +26,38 @@ const items = [
 ];
 
 class DellarcoCarousel extends Component {
+    state = {
+        activeIndex: 0
+    };
 
-    constructor(props) {
-        super(props);
-        this.state = { activeIndex: 0 };
-        this.next = this.next.bind(this);
-        this.previous = this.previous.bind(this);
-        this.goToIndex = this.goToIndex.bind(this);
-        this.onExiting = this.onExiting.bind(this);
-        this.onExited = this.onExited.bind(this);
-        this.cssModule = ""
-    }
-
-    onExiting() {
+    onExiting = () => {
         this.animating = true;
-    }
+    };
 
-    onExited() {
+    onExited = () => {
         this.animating = false;
-    }
+    };
 
-    next() {
+    next = () => {
         if (this.animating) return;
         const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
         this.setState({ activeIndex: nextIndex });
-    }
+    };
 
-    previous() {
+    previous = () => {
         if (this.animating) return;
         const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
         this.setState({ activeIndex: nextIndex });
-    }
+    };
 
-    goToIndex(newIndex) {
+    goToIndex = (newIndex) => {
         if (this.animating) return;
         this.setState({ activeIndex: newIndex });
-    }
+    };
 
     render() {
         const { activeIndex } = this.state;
+
         const slides = items.map(item => {
             return (
                 <CarouselItem
@@ -73,7 +66,9 @@ class DellarcoCarousel extends Component {
                     key = { item.src } >
 
                     <img src={item.src} alt={item.altText} />
+
                     <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+
                 </CarouselItem>
 
             );
@@ -85,7 +80,7 @@ class DellarcoCarousel extends Component {
                 next = { this.next }
                 previous = { this.previous } >
 
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} cssModule={this.cssModule} />
+                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
                 {slides}
                 <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                 <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
