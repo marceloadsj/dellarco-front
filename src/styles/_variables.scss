@@ -3,13 +3,12 @@
 // // Variables should follow the `$component-state-property-size` formula for
 // // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
 // //
 // // Color system
 // //
 
 // // stylelint-disable
-// $white:    #fff !default;
+$white: #fff !default;
 // $gray-100: #f8f9fa !default;
 // $gray-200: #e9ecef !default;
 // $gray-300: #dee2e6 !default;
@@ -62,7 +61,7 @@
 //   "gray-dark":  $gray-800
 // ), $colors);
 
-// $primary:       $blue !default;
+$primary: #8f1736;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -99,14 +98,13 @@
 // // Quickly modify global styling by enabling or disabling optional features.
 
 // $enable-caret:              true !default;
-// $enable-rounded:            true !default;
+$enable-rounded: false;
 // $enable-shadows:            false !default;
 // $enable-gradients:          false !default;
 // $enable-transitions:        true !default;
 // $enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
 // $enable-grid-classes:       true !default;
 // $enable-print-styles:       true !default;
-
 
 // // Spacing
 // //
@@ -159,7 +157,6 @@
 
 // $paragraph-margin-bottom:   1rem !default;
 
-
 // // Grid breakpoints
 // //
 // // Define the minimum dimensions at which your layout will change,
@@ -176,7 +173,6 @@
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 // @include _assert-starts-at-zero($grid-breakpoints);
 
-
 // // Grid containers
 // //
 // // Define the maximum width of `.container` for different screen sizes.
@@ -189,7 +185,6 @@
 // ) !default;
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
-
 
 // // Grid columns
 // //
@@ -205,7 +200,7 @@
 // $line-height-lg:              1.5 !default;
 // $line-height-sm:              1.5 !default;
 
-// $border-width:                1px !default;
+$border-width: 0px;
 // $border-color:                $gray-300 !default;
 
 // $border-radius:               .25rem !default;
@@ -224,7 +219,6 @@
 // $transition-base:             all .2s ease-in-out !default;
 // $transition-fade:             opacity .15s linear !default;
 // $transition-collapse:         height .35s ease !default;
-
 
 // // Fonts
 // //
@@ -297,7 +291,6 @@
 
 // $hr-margin-y:                 $spacer !default;
 
-
 // // Tables
 // //
 // // Customizes the `.table` component with basic values, each used across all table variations.
@@ -348,7 +341,6 @@
 
 // $input-btn-border-width:      $border-width !default;
 
-
 // // Buttons
 // //
 // // For each of Bootstrap's buttons, define text, background, and border color.
@@ -385,7 +377,6 @@
 
 // $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-
 // // Forms
 
 // $label-margin-bottom:                   .5rem !default;
@@ -402,11 +393,11 @@
 // $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-// $input-bg:                              $white !default;
+$input-bg: transparentize($white, 0.9);
 // $input-disabled-bg:                     $gray-200 !default;
 
 // $input-color:                           $gray-700 !default;
-// $input-border-color:                    $gray-400 !default;
+$input-border-color: $white;
 // $input-border-width:                    $input-btn-border-width !default;
 // $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
@@ -420,7 +411,7 @@
 // $input-focus-width:                     $input-btn-focus-width !default;
 // $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-// $input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color: $white;
 // $input-plaintext-color:                 $body-color !default;
 
 // $input-height-border:                   $input-border-width * 2 !default;
@@ -545,13 +536,11 @@
 //   en: "Browse"
 // ) !default;
 
-
 // // Form validation
 // $form-feedback-margin-top:          $form-text-margin-top !default;
 // $form-feedback-font-size:           $small-font-size !default;
 // $form-feedback-valid-color:         theme-color("success") !default;
 // $form-feedback-invalid-color:       theme-color("danger") !default;
-
 
 // // Dropdowns
 // //
@@ -580,7 +569,6 @@
 // $dropdown-item-padding-x:           1.5rem !default;
 
 // $dropdown-header-color:             $gray-600 !default;
-
 
 // // Z-index master list
 // //
@@ -678,12 +666,10 @@
 // $pagination-disabled-bg:            $white !default;
 // $pagination-disabled-border-color:  $gray-300 !default;
 
-
 // // Jumbotron
 
 // $jumbotron-padding:                 2rem !default;
 // $jumbotron-bg:                      $gray-200 !default;
-
 
 // // Cards
 
@@ -705,7 +691,6 @@
 // $card-columns-gap:                  1.25rem !default;
 // $card-columns-margin:               $card-spacer-y !default;
 
-
 // // Tooltips
 
 // $tooltip-font-size:                 $font-size-sm !default;
@@ -721,7 +706,6 @@
 // $tooltip-arrow-width:               .8rem !default;
 // $tooltip-arrow-height:              .4rem !default;
 // $tooltip-arrow-color:               $tooltip-bg !default;
-
 
 // // Popovers
 
@@ -748,7 +732,6 @@
 
 // $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
-
 // // Badges
 
 // $badge-font-size:                   75% !default;
@@ -761,7 +744,6 @@
 // // Use a higher than normal value to ensure completely rounded edges when
 // // customizing padding or font-size on labels.
 // $badge-pill-border-radius:          10rem !default;
-
 
 // // Modals
 
@@ -794,7 +776,6 @@
 
 // $modal-transition:                  transform .3s ease-out !default;
 
-
 // // Alerts
 // //
 // // Define alert colors, border radius, and padding.
@@ -809,7 +790,6 @@
 // $alert-bg-level:                    -10 !default;
 // $alert-border-level:                -9 !default;
 // $alert-color-level:                 6 !default;
-
 
 // // Progress bars
 
@@ -847,7 +827,6 @@
 // $list-group-action-active-color:    $body-color !default;
 // $list-group-action-active-bg:       $gray-200 !default;
 
-
 // // Image thumbnails
 
 // $thumbnail-padding:                 .25rem !default;
@@ -857,12 +836,10 @@
 // $thumbnail-border-radius:           $border-radius !default;
 // $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
 
-
 // // Figures
 
 // $figure-caption-font-size:          90% !default;
 // $figure-caption-color:              $gray-600 !default;
-
 
 // // Breadcrumbs
 
@@ -878,7 +855,6 @@
 // $breadcrumb-divider:                quote("/") !default;
 
 // $breadcrumb-border-radius:          $border-radius !default;
-
 
 // // Carousel
 
@@ -901,7 +877,6 @@
 
 // $carousel-transition:               transform .6s ease !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
-
 // // Close
 
 // $close-font-size:                   $font-size-base * 1.5 !default;
@@ -922,7 +897,6 @@
 
 // $pre-color:                         $gray-900 !default;
 // $pre-scrollable-max-height:         340px !default;
-
 
 // // Printing
 // $print-page-size:                   a3 !default;

@@ -1,2 +1,6 @@
 @import "variables";
 @import "bootstrap/scss/bootstrap";
+
+input {
+  border-bottom-width: 3px !important;
+}
