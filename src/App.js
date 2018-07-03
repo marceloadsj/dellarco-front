@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
-import Header from "./general/Header";
+import Header from "./header/Header";
 import Body1 from "./general/Body1";
 import Footer from "./general/Footer";
 

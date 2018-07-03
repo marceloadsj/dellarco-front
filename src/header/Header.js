@@ -2,31 +2,20 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import HeaderLogo from "./HeaderLogo";
 import HeaderTitle from "./HeaderTitle";
-import DellarcoCarousel from "./DellarcoCarousel";
 import HeaderSubscribe from "./HeaderSubscribe";
+import DellarcoCarousel from "../general/DellarcoCarousel";
+import "./Header.css";
 
 class Header extends Component {
   render() {
     return (
-      <Row className="bg-secondary">
+      <Row className="header">
         <Col>
-          <Row className="justify-content-center">
-            <Col xs="auto">
-              <HeaderLogo />
-            </Col>
-          </Row>
+          <HeaderLogo />
 
-          <Row className="mb-5">
-            <Col className="text-right">
-              <HeaderTitle />
-            </Col>
-          </Row>
+          <HeaderTitle />
 
-          <Row className="justify-content-end mb-5">
-            <Col xs="auto">
-              <HeaderSubscribe />
-            </Col>
-          </Row>
+          <HeaderSubscribe />
 
           <Row className="justify-content-center mb-5">
             <Col xs="auto">
