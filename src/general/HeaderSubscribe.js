@@ -1,15 +1,5 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Form,
-  FormGroup,
-  InputGroup,
-  InputGroupAddon,
-  Label,
-  Input,
-  InputGroupText,
-  FormText
-} from "reactstrap";
+import { Button, Form, InputGroup, InputGroupAddon, Input } from "reactstrap";
 
 class HeaderSubscribe extends Component {
   render() {

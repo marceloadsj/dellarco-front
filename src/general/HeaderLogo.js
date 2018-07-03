@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Logo from  "images/Logo.png";
+import Logo from "images/Logo.png";
 
 class HeaderLogo extends Component {
   render() {
-    return <img src={Logo}/>;
+    return <img src={Logo} />;
   }
 }
 
